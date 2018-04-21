@@ -1,4 +1,4 @@
-package org.spekframework.speksample
+package org.spekframework.speksample.common
 import org.jetbrains.spek.api.dsl.*
 
 fun SpecBody.whenever(description: String, body: ActionBody.() -> Unit) {

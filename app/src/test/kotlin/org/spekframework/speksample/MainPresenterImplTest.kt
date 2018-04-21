@@ -6,10 +6,10 @@ import com.nhaarman.mockito_kotlin.verify
 import com.nhaarman.mockito_kotlin.verifyNoMoreInteractions
 import org.jetbrains.spek.api.Spek
 import org.jetbrains.spek.api.dsl.given
-import org.junit.platform.runner.JUnitPlatform
-import org.junit.runner.RunWith
+import org.mockito.Mockito
+import org.spekframework.speksample.common.then
+import org.spekframework.speksample.common.whenever
 
-@RunWith(JUnitPlatform::class)
 class MainPresenterImplTest : Spek({
     given("a main presenter") {
         val view                = mock<MainView>()
@@ -22,6 +22,7 @@ class MainPresenterImplTest : Spek({
 
         whenever("doSomeWork") {
             presenter.doSomeWork()
+
             then("Great") {
                 verify(view).anAwesomeWork("Great")
             }
