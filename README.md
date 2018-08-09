@@ -1,5 +1,3 @@
-# Spek Android 3.0 Example
+# Spek2 Android Example with Jacoco Coverage
 
-Spek: `1.1.5`
-JUnit Platform: `1.0.1`
-Spek AS 3.0 plugin: `0.5.0`
+Spek: `2.0.0-alpha1` + Kotlin: `1.2.60` + Gradle: `4.9` + Jacoco `0.8.1`

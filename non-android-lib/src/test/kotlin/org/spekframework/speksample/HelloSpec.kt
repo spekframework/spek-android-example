@@ -1,13 +1,14 @@
 package org.spekframework.speksample
 
-import org.hamcrest.CoreMatchers.equalTo
-import org.jetbrains.spek.api.Spek
-import org.jetbrains.spek.api.dsl.it
-import org.junit.Assert.assertThat
-
+import org.spekframework.spek2.Spek
+import org.spekframework.spek2.style.specification.describe
+import kotlin.test.assertEquals
 
 object HelloSpec: Spek({
-    it("should say hello") {
-        assertThat(Hello().hello(), equalTo("Hello"))
+    describe("A Hello") {
+        it("should say hello") {
+            assertEquals(expected = "Hello", actual = Hello().hello())
+        }
     }
+
 })
