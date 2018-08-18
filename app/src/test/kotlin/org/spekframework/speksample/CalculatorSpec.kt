@@ -1,14 +1,15 @@
 package org.spekframework.speksample
 
-import org.hamcrest.CoreMatchers.equalTo
-import org.jetbrains.spek.api.Spek
-import org.jetbrains.spek.api.dsl.it
-import org.junit.Assert.assertThat
+import org.spekframework.spek2.Spek
+import org.spekframework.spek2.style.specification.describe
+import kotlin.test.assertEquals
 
 object CalculatorSpec : Spek({
-    val calculator by memoized { Calculator() }
+    describe("A Calculator") {
+        val calculator by memoized { Calculator() }
 
-    it("should be 4") {
-        assertThat(calculator.add(2, 2), equalTo(4))
+        it("should return 4") {
+            assertEquals(expected = 4, actual = calculator.add(2, 2))
+        }
     }
 })
